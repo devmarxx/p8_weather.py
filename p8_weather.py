@@ -44,6 +44,7 @@ import os
 import datetime
 
 weekDays = ("MON","TUE","WED","THU","FRI","SAT","SUN")
+hourNow = datetime.datetime.now().hour
 
 # Put your python version here if needed (i.e. python3.9)
 my_env = ""
@@ -55,11 +56,30 @@ mac = "xx:xx:xx:xx:xx:xx"
 lat = 48.85
 lon = 2.29
 
+tc = 0
+stc = 0
 dc = 0
 future = "0,"
 today = "0,"
 icon = "0"
 nearest = "0"
+
+if hourNow < 24:
+   stc = 8
+if hourNow < 21:
+   stc = 7
+if hourNow < 18:
+   stc = 6
+if hourNow < 15:
+   stc = 5
+if hourNow < 12:
+   stc = 4
+if hourNow < 9:
+   stc = 3
+if hourNow < 6:
+   stc = 2
+if hourNow < 3:
+   stc = 1
 
 # converter for negative temperatures
 def conv_negative(temp):
@@ -77,10 +97,14 @@ r = requests.get(url)
 root = ET.fromstring(r.content)
 
 for node in root.iter():
-    # catch the first temp2m
+    # catch the nearest temp2m
     if node.tag == "temp2m":
+       tc = tc + 1
        nearest = conv_negative(node.text)
-       break
+       if tc == stc:
+          temp_now = nearest
+
+nearest = temp_now
 
 # define the icons
 def set_icon(val):
