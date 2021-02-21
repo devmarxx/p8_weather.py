@@ -37,7 +37,7 @@ the uwatch2lib.py:
        return self._send_raw_cmd(0x43,"BBBBBBBBBBBBBBBBBBBBBBB",*arr)
 ```
 
-Byte descrition:
+Byte description:
 
 Today (First Byte D0):
 
