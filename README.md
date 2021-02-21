@@ -76,3 +76,43 @@ Icons:
 * 3 Cloud with heavy rain
 * 4 Cloud with rain
 * 5 Sun
+
+Console output:
+
+```bash command-line
+---------------------------------
+Todays temperature: 3
+Weather: pcloudy
+Range: 3 - 10
+---------------------------------
+Tomorrow range: 0 - 10
+---------------------------------
+TUE
+Weather: clear
+Range: 1 - 11
+---------------------------------
+WED
+Weather: clear
+Range: 1 - 11
+---------------------------------
+THU
+Weather: clear
+Range: 2 - 12
+---------------------------------
+FRI
+Weather: cloudy
+Range: 3 - 11
+---------------------------------
+
+INFO     Starting...
+INFO     Using MAC address provided by client: xx:xx:xx:xx:xx:xx
+INFO     Connecting to MAC xx:xx:xx:xx:xx:xx...
+INFO     ok
+INFO     Starting...
+INFO     Using MAC address provided by client: xx:xx:xx:xx:xx:xx
+INFO     Connecting to MAC xx:xx:xx:xx:xx:xx...
+INFO     ok
+
+---------------------------------
+Done
+```
