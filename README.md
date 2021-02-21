@@ -17,7 +17,7 @@ This script needs to be placed in the same folder as uwatch2-client
 To make this work you will need to uncomment and edit this code in 
 the uwatch2lib.py:
 
-    def set_future_weather(self, args):
+   def set_future_weather(self, args):
        arr = args.split(',')
        """Set future weather
        Args 21 bytes from C2439F
