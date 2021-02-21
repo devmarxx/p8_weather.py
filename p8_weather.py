@@ -62,6 +62,7 @@ dc = 0
 future = "0,"
 today = "0,"
 icon = "0"
+tempnow = "0"
 nearest = "0"
 
 if hourNow < 24:
