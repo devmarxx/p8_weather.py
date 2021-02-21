@@ -42,9 +42,12 @@ import xml.etree.ElementTree as ET
 
 import os
 import datetime
+from datetime import timedelta
 
 weekDays = ("MON","TUE","WED","THU","FRI","SAT","SUN")
-hourNow = datetime.datetime.now().hour
+# It is not understood by now, why we need to substract 15 hours to get a 
+# "near actual time" temperature. How does this behave on different longitudes?
+hourNow = (datetime.datetime.now() - timedelta(hours=15)).hour
 
 # Put your python version here if needed (i.e. python3.9)
 my_env = ""
