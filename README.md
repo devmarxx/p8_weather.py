@@ -17,7 +17,7 @@ This script needs to be placed in the same folder as uwatch2-client
 To make this work you will need to uncomment and edit this code in 
 the uwatch2lib.py:
 
-...python
+```python
    def set_future_weather(self, args):
        arr = args.split(',')
        """Set future weather
@@ -35,4 +35,4 @@ the uwatch2lib.py:
        tested_and_working: False
    """
        return self._send_raw_cmd(0x43,"BBBBBBBBBBBBBBBBBBBBBBB",*arr)
-...
+```
