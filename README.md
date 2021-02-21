@@ -36,3 +36,43 @@ the uwatch2lib.py:
    """
        return self._send_raw_cmd(0x43,"BBBBBBBBBBBBBBBBBBBBBBB",*arr)
 ```
+
+Byte descrition:
+
+Today (First Byte D0):
+
+(0x43,"BBBBBBBBBBBBBBBBBBBBBBB",0,0,4,0,32,0,32,0,32,0,32,0,110,0,117,0,108,0,108,0,77,0,6)
+
+Future (First Byte D0):
+
+(0x42,"BBBBBBBBBBBBBBBBBBBBB",0,1,8,0,0,6,0,253,5,0,255,6,3,2,10,3,5,11,0,4,11)
+
+Home screen:
+
+Temperature range Future D1-D2
+Icon Today D1
+
+Weather screen:
+
+Temperature Today D2
+Icon Today D1
+Temperature range Future D1-D2
+Tomorrow Future D4-D5
+
+Week screen (DAYS after tomorrow):
+
+DAY1 temperature range Future D7-D8 Icon Future D6
+DAY2 temperature range Future D10-D11 Icon Future D9
+DAY3 temperature range Future D13-D14 Icon Future D12
+DAY4 temperature range Future D15-D16 Icon Future D14
+
+Temperatures: 255 is -1, 254 is -2, ...
+
+Icons:
+
+0 Cloud with sun
+1 Fog
+2 Cloud
+3 Cloud with heavy rain
+4 Cloud with rain
+5 Sun
