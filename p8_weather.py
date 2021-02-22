@@ -151,20 +151,22 @@ for node in root.iter():
     # set min and max for today
     if dc == 1 and node.tag == "temp2m_max":
       temp2m_max = conv_negative(node.text)
+      ht2_max = node.text
     if dc == 1 and node.tag == "temp2m_min":
       temp2m_min = conv_negative(node.text)
       future = future + temp2m_min + "," + temp2m_max + ",0,"
-      ostr3 = "Range: " + temp2m_min + " - " + temp2m_max
+      ostr3 = "Range: " + node.text + " - " + ht2_max
       print (ostr3)
       print ("---------------------------------")
 
     # set min and max for tomorrow
     if dc == 2 and node.tag == "temp2m_max":
       temp2m_max = conv_negative(node.text)
+      ht2_max = node.text
     if dc == 2 and node.tag == "temp2m_min":
       temp2m_min = conv_negative(node.text)
       future = future + temp2m_min + "," + temp2m_max + ","
-      ostr4 = "Tomorrow range: "  + temp2m_min + " - " + temp2m_max
+      ostr4 = "Tomorrow range: " + node.text + " - " + ht2_max
       print (ostr4)
       print ("---------------------------------")
 
@@ -181,10 +183,11 @@ for node in root.iter():
       print (ostr5)
     if dc == 3 and node.tag == "temp2m_max":
       temp2m_max = conv_negative(node.text)
+      ht2_max = node.text
     if dc == 3 and node.tag == "temp2m_min":
       temp2m_min = conv_negative(node.text)
       future = future + temp2m_min + "," + temp2m_max + ","
-      ostr6 = "Range: "  + temp2m_min + " - " + temp2m_max
+      ostr6 = "Range: " + node.text + " - " + ht2_max
       print (ostr6)
       print ("---------------------------------")
 
@@ -201,10 +204,11 @@ for node in root.iter():
       print (ostr5)
     if dc == 4 and node.tag == "temp2m_max":
       temp2m_max = conv_negative(node.text)
+      ht2_max = node.text
     if dc == 4 and node.tag == "temp2m_min":
       temp2m_min = conv_negative(node.text)
       future = future + temp2m_min + "," + temp2m_max + ","
-      ostr6 = "Range: "  + temp2m_min + " - " + temp2m_max
+      ostr6 = "Range: " + node.text + " - " + ht2_max
       print (ostr6)
       print ("---------------------------------")
 
@@ -221,10 +225,11 @@ for node in root.iter():
       print (ostr5)
     if dc == 5 and node.tag == "temp2m_max":
       temp2m_max = conv_negative(node.text)
+      ht2_max = node.text
     if dc == 5 and node.tag == "temp2m_min":
       temp2m_min = conv_negative(node.text)
       future = future + temp2m_min + "," + temp2m_max + ","
-      ostr6 = "Range: "  + temp2m_min + " - " + temp2m_max
+      ostr6 = "Range: " + node.text + " - " + ht2_max
       print (ostr6)
       print ("---------------------------------")
 
@@ -241,10 +246,11 @@ for node in root.iter():
       print (ostr5)
     if dc == 6 and node.tag == "temp2m_max":
       temp2m_max = conv_negative(node.text)
+      ht2_max = node.text
     if dc == 6 and node.tag == "temp2m_min":
       temp2m_min = conv_negative(node.text)
       future = future + temp2m_min + "," + temp2m_max + ",0,4,11"
-      ostr6 = "Range: "  + temp2m_min + " - " + temp2m_max
+      ostr6 = "Range: " + node.text + " - " + ht2_max
       print (ostr6)
       print ("---------------------------------")
       print ("")
