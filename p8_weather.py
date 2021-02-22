@@ -117,6 +117,8 @@ def set_icon(val):
        my_icon = "5"
     if val == "pcloudy":
        my_icon = "0"
+    if val == "mcloudy":
+       my_icon = "0"
     if val == "cloudy":
        my_icon = "0"
     if val == "vcloudy":
